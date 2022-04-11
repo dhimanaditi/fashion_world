@@ -1,0 +1,169 @@
+{
+  "users": [
+    {
+      "u_name": "aditi",
+      "u_ln": "dhiman",
+      "uid": "byuttyg@gmail.com",
+      "u_psw": "123@aDfgt",
+      "id": 1
+    },
+    {
+      "u_name": "as",
+      "u_ln": "dhiman",
+      "uid": "123@yahoo.com",
+      "u_psw": "1234",
+      "id": 2
+    },
+    {
+      "u_name": "shikha",
+      "u_ln": "rana",
+      "uid": "shikharana4@gmail.com",
+      "u_psw": "qwerTY123!@#",
+      "id": 3
+    },
+    {
+      "u_name": "atul",
+      "u_ln": "kharwal",
+      "uid": "kharwal@gmail.com",
+      "u_psw": "123@aDfgt",
+      "id": 4
+    },
+    {
+      "u_name": "as",
+      "u_ln": "b",
+      "uid": "shikharana4@gmail.com",
+      "u_psw": "asd",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "p_id": 111,
+      "p_name": "P_one",
+      "p_cost": 100,
+      "p_desc": "This is product 1",
+      "pic": "../media/top1.jpg"
+    },
+    {
+      "id": 2,
+      "p_id": 222,
+      "p_name": "P_two",
+      "p_cost": 600,
+      "p_desc": "This is product 2",
+      "pic": "../media/top2.jpg"
+    },
+    {
+      "id": 3,
+      "p_id": 333,
+      "p_name": "P_three",
+      "p_cost": 900,
+      "p_desc": "This is product 3",
+      "pic": "../media/top3.jpg"
+    },
+    {
+      "id": 4,
+      "p_id": 444,
+      "p_name": "p_four",
+      "p_cost": 400,
+      "p_desc": "This is product 4",
+      "pic": "../media/top4.jpg"
+    },
+    {
+      "id": 5,
+      "p_id": 555,
+      "p_name": "P_five",
+      "p_cost": 600,
+      "p_desc": "This is product 5",
+      "pic": "../media/top5.png"
+    },
+    {
+      "id": 6,
+      "p_id": 666,
+      "p_name": "P_six",
+      "p_cost": 500,
+      "p_desc": "This is product 6",
+      "pic": "../media/top6.png"
+    }
+  ],
+  "products2": [
+    {
+      "id": 1,
+      "p_id": 111,
+      "p_name": "P_one",
+      "p_cost": 1000,
+      "p_desc": "This is product 1",
+      "pic": "../media/glasses1.jpg"
+    },
+    {
+      "id": 2,
+      "p_id": 222,
+      "p_name": "P_two",
+      "p_cost": 2000,
+      "p_desc": "This is product 2",
+      "pic": "../media/glasses2.jpg"
+    },
+    {
+      "id": 3,
+      "p_id": 333,
+      "p_name": "P_three",
+      "p_cost": 3000,
+      "p_desc": "This is product 3",
+      "pic": "../media/glasses3.jpg"
+    },
+    {
+      "id": 4,
+      "p_id": 444,
+      "p_name": "p_four",
+      "p_cost": 4000,
+      "p_desc": "This is product 4",
+      "pic": "../media/glasses4.jpg"
+    },
+    {
+      "id": 5,
+      "p_id": 555,
+      "p_name": "P_five",
+      "p_cost": 600,
+      "p_desc": "This is product 5",
+      "pic": "../media/glasses5.jpg"
+    },
+    {
+      "id": 6,
+      "p_id": 666,
+      "p_name": "P_six",
+      "p_cost": 500,
+      "p_desc": "This is product 6",
+      "pic": "../media/glasses6.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "333",
+      "qty": "2",
+      "byed": "0",
+      "id": 1
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "111",
+      "qty": "1",
+      "byed": "0",
+      "id": 2
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "555",
+      "qty": "1",
+      "byed": "0",
+      "id": 3
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "666",
+      "qty": "2",
+      "byed": "0",
+      "id": 4
+    }
+  ]
+}

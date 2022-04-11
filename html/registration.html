@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../script/header.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <title>REGISTER YOURSELF</title>
+        <link rel="icon" type="image/x-icon" href="../media/fav-icon.png">
+        <style>
+            form {width: 30%;
+                justify-content: center;}
+
+input.record {
+    width: 85%;
+    height: 32px;
+}
+
+.registration-container {
+    width: 100%;
+    
+}
+
+.registration-form {
+    justify-content: center;
+    width: 100%;
+
+    display: flex;
+}
+.registration-container {
+    justify-content: center;
+    text-align: center;
+    
+}
+
+h1.register-heading {
+    font-weight: 100;
+    font-family: Felix Titling;
+}
+p.note{
+   font-size:18px;
+   font-family:'Times New Roman', Times, serif;
+}
+#button{
+    background-color:black;
+    color:white;
+}
+
+        </style>
+
+    </head>
+    <body>
+        <my-header></my-header>
+        <div class="registration-container">
+            <h1 class="register-heading">REGISTER</h1>
+            <p class="note">Please fill in the information below:</p>
+            <div class="registration-form">
+                <form method="post" id="myForm" onsubmit="(event)=>event.preventDefault()">
+                    <input required class="record" type="text" placeholder="NAME" name="u_name" id="u_name"><br><br>
+                    <input required class="record" type="text" placeholder="LAST NAME" name="u_ln" id="u_ln"><br><br>
+                    <input required class="record" type="email" placeholder="EMAIL" name="uid" id="uid"><br><br>
+                    <input required class="record" type="text" placeholder="PASSWORD" name="u_psw" id="u_psw"><br><br>
+                    <input class="record" id="button" type="submit" value="CREATE MY ACCOUNT">
+                </form><h5 class="alert"></h5>
+            </div>
+        </div>
+        <script src="../script/registration.js"></script>
+    </body>
+</html>

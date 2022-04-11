@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FASHION WORLD</title>
+        <link rel="icon" type="image/x-icon" href="media/fav-icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./script/header.js"></script>
+        <style>
+            @media only screen and ( max-width:767px)
+            {
+                
+
+.image-div {
+    width: 100%;
+}
+
+.main-content-div {
+    width: 100%;
+}
+
+.main-content-div {
+    position: absolute;
+    top: 50%;
+    background-color: transparent!important;
+    font-size: 10px;
+    transform: translateY(-50%)!important;
+}
+
+                .row {
+                 flex-wrap: wrap!important;
+              }
+
+                .col {
+                    width: 50%;margin: 0;padding: 0;
+                }
+         
+                .another-banner-container {background-color: grey;}
+
+.another-banner-main-div {
+    justify-content: center;
+    padding: 0px;
+}
+            }
+            @media only screen and (min-width:768px )and (max-width:1023px){
+
+            }
+            .announcement_bar_section{
+                background-color:black;
+                color:white;
+                display:block;
+            }
+    
+            p.announcement_bar_content.Heading {
+                padding: 12px 15px;
+                margin: 0 auto;
+                text-align: center;
+                font-family:'Courier New', Courier, monospace;
+            }
+            .container-xxl{
+                width:100%;
+              
+                margin-right:auto;
+                margin-left:auto;
+            }
+           
+                 body{
+                margin:0;
+            }
+            /*menu icon*/
+            .container {
+  display: inline-block;
+  cursor: pointer;
+  margin:20px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(59, 58, 58);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.header-section{
+    position:sticky;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+.logo{
+   
+    width: 20%;
+}
+.header-section-right{
+    text-align: end;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+    display:flex;
+}
+.header-section-left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+
+.store-link {
+    text-decoration: none;
+    color: white;
+    margin: 30px;
+    
+    background-color: rgb(128, 123, 123);
+    border: 1px solid;
+    padding: 10px;
+}
+.logo-link{
+    text-decoration: none;
+    color:black;
+    font-size: 22px;
+
+}
+.logo {
+    
+    text-align: center;
+}
+h1.logo-heading {
+    font-size: 1.5em;
+    /*font-family:;*/
+}
+.wishlist, .cart, .search, .account{
+    text-decoration: none;
+    color: white;
+    
+    background-color: rgb(128, 123, 123);
+    border: 1px solid;
+    padding: 10px;
+}
+.inner-div{
+    background-color:rgb(100, 102, 100);
+    color:white;
+    width:20%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+#quicklinks-main {
+    display: flex;
+}
+
+.quicklink {
+    display: flex;
+    width: 100%;
+}
+/*image banner*/
+.banner-image {
+    width: 100%;
+    position: relative;
+  text-align: center;
+  color: black;
+}
+.centered {
+  position: absolute;
+ /* top: 110%;*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button{
+    position:absolute;
+}
+.collection-heading{
+    text-align:center;
+}
+.collection-div{
+    text-align:center;
+    margin:10px auto;
+}
+.collection-link{
+    border:1px solid black;
+    padding:10px;
+}
+.collection-card{
+    margin-left:5px;
+    display:flex wrap wrap;
+    width:100%;
+    margin-top:10px;
+}
+
+.card{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    max-width:100%;
+    word-wrap:break-word;
+    background-color:#fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,.125);
+    border-radius:.25rem
+}
+.row {
+    display: flex;
+    flex-wrap:wrap;
+    margin: 10px;
+    
+}
+
+.col {
+    
+    margin: 20px;
+}
+.row:hover{
+    color:grey;
+}
+.row-center{
+    justify-content:center;
+}
+/**/
+.image-div {
+height:400px;
+    width: 50%;
+}
+.image-div-image{
+    height:380px;
+    width:100%;
+}
+
+.main-content-div {
+    height:380px;
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(221, 219, 219);
+   
+}
+.content-text p{
+    font-size:30px;
+}
+.content-link {
+    margin-top: 45px;
+}
+.content-link a{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+.another-banner-main-div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.another-banner-container {
+    width: 100%;
+    display: flex;
+}
+.content-div {
+    justify-content: center;
+   text-align: center;
+}
+
+
+/*searchbar*/
+.togglesearch{
+  background: #E8E8E4;
+  position: absolute;
+  top: 54px;
+  right: 28.7%;
+  width: 350px;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-top:4px solid #D80B15;
+  display: none;
+}
+.togglesearch:before{
+  content: "";
+  position: absolute;
+  top: -32px;
+  right: 13px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid #D80B15;
+}
+.togglesearch input[type="text"]{
+  width: 200px;
+  padding: 5px 10px;
+  margin-left: 23px;
+  border: 1px solid #D80B15;
+  outline: none;
+}
+.togglesearch input[type="button"]{
+  width: 80px;
+  padding: 5px 0;
+  background: #D80B15;
+  color: #fff;
+  margin-left: -6px;
+  border: 1px solid #D80B15;
+  outline: none;
+  cursor: pointer;
+}
+.inner-div{
+            background-color:rgb(100, 102, 100);
+            color:white;
+            width:20%;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        #quicklinks-main {
+            display: flex;
+        }
+        
+        .quicklink {
+            display: flex;
+            width: 100%;
+        }
+        
+        .clction-link{
+            text-decoration:none;
+            color:white;
+        } 
+        img.card-img-top {
+    max-height: 250px;
+    min-height: 250px;
+    object-fit: contain;
+}
+.card-body {
+    text-align: center;
+    padding: 10px;
+}
+.row {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+ 
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+  
+}
+.fa-facebook {
+  background: #3B5998;
+
+  color: white;
+}
+.outer-footer {
+    background-color: black;
+    color: white;
+    padding: 40px 0px;
+}
+
+.inner-footer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.first {
+    width: 25%;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.second {
+    width: 25%;
+}
+
+.third {
+    width: 25%;
+}
+
+.forth {
+    width: 25%;
+}
+
+.first img {
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+
+
+.outer-footer ul li {
+    list-style-type: none;
+    padding: 2px 0;
+}
+
+.forth a.fa {
+    font-size: 40px;
+    margin-right: 10px;
+    padding: 10px;
+}
+.main-banners .buttons {
+  position: absolute;
+  top:  225%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-banners .buttons:hover {
+  background-color: black;
+  color:white;
+}
+.main-banners a {
+    color: white;
+    text-decoration: none;
+}
+.main-banner .button {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-banner .button:hover {
+  background-color: black;
+  color:white;
+}
+.main-banner a {
+    color: white;
+    text-decoration: none;
+}
+.centered {
+    font-size: 35px;
+    font-family: monospace;
+    
+}
+h5.card-title {
+    font-size: 19px;
+    font-family: monospace;
+    font-weight: 500;
+}
+
+  
+        </style>
+     
+    </head>
+    <body>
+
+
+        <my-header></my-header>
+
+        
+
+
+        <div class="container-xxl">
+          <div class="left"><h5 class="wish"></h5></div>
+            <div id="quicklinks-main">
+                <div class="quicklink">
+                    <div class="inner-div"><a class="clction-link" href="./html/tops.html">SHOP TOPS</a></div>
+                    <div class="inner-div"><a class="clction-link" href="./html/dresses.html">SHOP DRESSES</a></div>
+                    <div class="inner-div"><a class="clction-link" href="./html/denims.html">SHOP DENIMS</a></div>
+                    <div class="inner-div"><a class="clction-link" href="./html/watches.html">SHOP WATCHES</a></div>
+                    <div class="inner-div"><a class="clction-link" href="./html/sunglasses.html">SHOP SUNGLASSES</a></div>
+                </div>
+                </div>
+            <div class="main-banner">
+                <img class="banner-image" src="media\mainbanner.jpg" alt="main-banner">
+               <!--<div class="centered">Centered</div>-->
+                <div class="button">
+                    <a href="#">SHOP NOW</a>
+                </div>
+            </div>
+            <div class="main-collection-section">
+                <section class="collection-section">
+                    <header class="collection-header">
+                        <h1 class="collection-heading">JUST ARRIVED</h1>
+                        <div class="collection-div">
+                            <a class="collection-link">VIEW ALL</a>
+                        </div>
+                    </header>
+                    <div class="collection-cards">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="media\glasses1.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Sun Glasses</h5>
+                                      <a href="#" class="btn btn-primary"></a>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="media\image7.png" alt="Card image cap">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Hand-made Necklace</h5>
+                                      <a href="#" class="btn btn-primary"></a>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="media\image8.png" alt="Card image cap">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Handbag</h5>
+                                      <a href="#" class="btn btn-primary"></a>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="media\glasses1.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Sun Glasses</h5>
+                                      <a href="#" class="btn btn-primary"></a>
+                                    </div>
+        
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="main-banners">
+                <img class="banner-image" src="media\image6.png" alt="main-banner">
+                <!--<div class="centered">Centered</div>-->
+                <div class="buttons">
+                    <a href="#">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="collection-cards">
+                <div class="row row-center">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="media\image3.png" alt="Card image cap">
+                           <!-- <div class="card-body">
+                              <h5 class="card-title"></h5>
+                              <a href="#" class="btn btn-primary"></a>
+                            </div>-->
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="media\image5.png" alt="Card image cap">
+                           <!-- <div class="card-body">
+                              <h5 class="card-title"></h5>
+                              <a href="#" class="btn btn-primary"></a>
+                            </div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="another-banner-container">
+                <div class="another-banner-main-div">
+                    <div class="image-div"><img class="image-div-image" src="media\image4.png"></div>
+                    <div class="main-content-div">
+                        <div class="content-div">
+                            <div class="content-text"><p>MORE STYLES ARE AVAILABLE HERE</p></div>
+                            <div class="content-link">
+                                <a href="#">Find a store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-footer">
+                <div class="inner-footer">
+                    <div class="first">
+                        <img src="./media/fav-icon.png">
+                    </div>
+                    <div class="second">
+                        <ul>
+                            <li>About us</li>
+                            <li>Find our store</li>
+                        </ul>
+                    </div>
+                    <div class="third">
+                        <ul>
+                            <li>Services</li>
+                            <li>Recruitment</li>
+                        </ul>
+                    </div>
+                    <div class="forth">
+                        <a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="./script/dashboard.js"></script>
+    </body>
+</html>
+
