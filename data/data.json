@@ -138,32 +138,32 @@
   ],
   "cart": [
     {
-      "uid": "shikharana4@gmail.com",
+      "qty": "1",
+      "id": 1,
       "p_id": "333",
-      "qty": "2",
-      "byed": "0",
-      "id": 1
+      "user": "shikharana4@gmail.com",
+      "byed": "1"
     },
     {
       "uid": "shikharana4@gmail.com",
       "p_id": "111",
       "qty": "1",
-      "byed": "0",
+      "byed": "1",
       "id": 2
     },
     {
       "uid": "shikharana4@gmail.com",
       "p_id": "555",
       "qty": "1",
-      "byed": "0",
+      "byed": "1",
       "id": 3
     },
     {
-      "uid": "shikharana4@gmail.com",
+      "qty": "1",
+      "id": 4,
       "p_id": "666",
-      "qty": "2",
-      "byed": "0",
-      "id": 4
+      "user": "shikharana4@gmail.com",
+      "byed": "1"
     }
   ]
 }
