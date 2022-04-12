@@ -29,7 +29,21 @@ $(document).ready(()=>{
     })*/
 
     $("#button").click((event)=>{
+        let name=document.getElementById("u_name").value
+        let lname =document.getElementById("u_ln").value
+        let mail =document.getElementById("uid").value
+        let psw =document.getElementById("u_psw").value
+        if(name!=""&&lname!=""&&mail!=""&&psw!=""){
+
+        
         event.preventDefault()
+
+    }
+    else
+    {
+        document.getElementById("alert").innerHTML="please filled out the field"
+    }
+
         let record = {
             
             "u_name" : document.getElementById("u_name").value,
@@ -56,10 +70,11 @@ $(document).ready(()=>{
                 console.log(errRes)
             }
         })
+   
     
         LOAD()
     }
    
     
-    )   
+)   
 })

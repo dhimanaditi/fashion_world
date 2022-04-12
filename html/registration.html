@@ -58,7 +58,12 @@ p.note{
                     <input required class="record" type="text" placeholder="NAME" name="u_name" id="u_name"><br><br>
                     <input required class="record" type="text" placeholder="LAST NAME" name="u_ln" id="u_ln"><br><br>
                     <input required class="record" type="email" placeholder="EMAIL" name="uid" id="uid"><br><br>
-                    <input required class="record" type="text" placeholder="PASSWORD" name="u_psw" id="u_psw"><br><br>
+                    <input required class="record" 
+                                    type="password"
+                                     placeholder="PASSWORD"
+                                     name="u_psw" id="u_psw" 
+                                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
                     <input class="record" id="button" type="submit" value="CREATE MY ACCOUNT">
                 </form><h5 class="alert"></h5>
             </div>

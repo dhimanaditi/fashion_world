@@ -34,6 +34,20 @@
       "uid": "shikharana4@gmail.com",
       "u_psw": "asd",
       "id": 5
+    },
+    {
+      "u_name": "aditi",
+      "u_ln": "",
+      "uid": "",
+      "u_psw": "",
+      "id": 6
+    },
+    {
+      "u_name": "aditi",
+      "u_ln": "dhiman",
+      "uid": "dhiman@gmail.com",
+      "u_psw": "sharma@17",
+      "id": 7
     }
   ],
   "products": [

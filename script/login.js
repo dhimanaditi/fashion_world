@@ -93,7 +93,9 @@ function login()
     }
 $(document).ready(()=>{
     $("#login").click((e)=>{
+      if(uid!=""&&u_psw!=""){
         e.preventDefault()
+      }
         login()
     })
 })
