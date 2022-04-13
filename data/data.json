@@ -48,6 +48,13 @@
       "uid": "dhiman@gmail.com",
       "u_psw": "sharma@17",
       "id": 7
+    },
+    {
+      "u_name": "c",
+      "u_ln": "vg",
+      "uid": "bvjhgj",
+      "u_psw": "bvhj",
+      "id": 8
     }
   ],
   "products": [
@@ -210,13 +217,6 @@
     },
     {
       "uid": "shikharana4@gmail.com",
-      "p_id": "104",
-      "qty": "1",
-      "byed": "0",
-      "id": 2
-    },
-    {
-      "uid": "shikharana4@gmail.com",
       "p_id": "110",
       "qty": "1",
       "byed": "0",
@@ -224,17 +224,10 @@
     },
     {
       "uid": "shikharana4@gmail.com",
-      "p_id": "101",
-      "qty": "1",
-      "byed": "0",
-      "id": 4
-    },
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "106",
+      "p_id": "107",
       "qty": "2",
       "byed": "0",
-      "id": 5
+      "id": 4
     },
     {
       "uid": "shikharana4@gmail.com",
@@ -242,6 +235,27 @@
       "qty": "2",
       "byed": "0",
       "id": 6
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "111",
+      "qty": "1",
+      "byed": "0",
+      "id": 8
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "108",
+      "qty": "1",
+      "byed": "0",
+      "id": 10
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "109",
+      "qty": "1",
+      "byed": "0",
+      "id": 12
     }
   ]
 }

@@ -130,6 +130,11 @@ function addToCart(id)
     let cartData = []
     let ix = ''
     let cartid = ''
+
+    let cqty1 = 0
+    let cartData1 = []
+    let ix1 = ''
+    let cartid11 = ''
     $.ajax({
         url: url + "/cart" + "?q=" + user,  //get all products from cart for loggedin user
         type: "GET",
@@ -200,28 +205,28 @@ function addToCart(id)
         type: "GET",
         success: (posRes) => {
             cartData = posRes
-            for(let i = 0; i < cartData.length; i++)
+            for(let i = 0; i < cartData1.length; i++)
             {                
-                if(cartData[i].p_id == gdata2[id].p_id && cartData[i].byed == 0)
+                if(cartData1[i].p_id == gdata2[id].p_id && cartData1[i].byed == 0)
                 {                                 
-                    console.log("Comparison success qty = ",cartData[i].qty)      
-                    cqty = 1
-                    ix = i
-                    cartid = cartData[i].id                                                          
+                    console.log("Comparison success qty = ",cartData1[i].qty)      
+                    cqty1 = 1
+                    ix1 = i
+                    cartid1 = cartData1[i].id                                                          
                 }                
             }
-            if(cqty == 1)   //if quanity is 1 product is present, update qty only otherwise make entry in cart
+            if(cqty1 == 1)   //if quanity is 1 product is present, update qty only otherwise make entry in cart
             {
                 console.log("Present")
-                let data = {}
-                data.uid = user
-                data.p_id = gdata2[id].p_id        
-                data.qty = parseInt(cartData[ix].qty) + 1
-                data.byed = 0
+                let data1 = {}
+                data1.uid = user
+                data1.p_id = gdata2[id].p_id        
+                data1.qty = parseInt(cartData[ix].qty) + 1
+                data1.byed = 0
                 $.ajax({            
                     url : url+"/cart/"+cartid,
                     type : "PUT",
-                    data : data,
+                    data : data1,
                     success : (posRes) =>{
                         console.log(posRes)
                     },
@@ -233,15 +238,15 @@ function addToCart(id)
             else    
             {
                 console.log("Absent")
-                let data = {}
-                data.uid = user
-                data.p_id = gdata2[id].p_id        
-                data.qty = 1
-                data.byed = 0                    
+                let data1 = {}
+                data1.uid = user
+                data1.p_id = gdata2[id].p_id        
+                data1.qty = 1
+                data1.byed = 0                    
                 $.ajax({
                     url : url+"/cart",
                     type : "POST",
-                    data : data,
+                    data : data1,
                     success : (posRes) =>{
                         console.log(posRes)
                     },
@@ -320,7 +325,7 @@ function showCart() {
                 if (cartData[i].byed == 0) {    //check for product already purchased or not
                     for (let j = 0; j < gdata2.length; j++) {    //iterate products data
                         if (gdata2[j].p_id == cartData[i].p_id) {   //map cart and products with p_id
-                            let obj = gdata[j]
+                            let obj = gdata2[j]
                             x = x + `
                                 <div class = 'row col-12'>
                                 <div class='col-4'>

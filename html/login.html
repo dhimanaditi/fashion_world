@@ -122,11 +122,12 @@ input[type="submit"] {
                             <h1 class="login-heading">LOGIN</h1>
                             <h3 class="another-heading">Please enter you e-mail and password:</h3>
                             <form method="post" id="myForm" onsubmit="(e)=>e.preventDefault()">
-                                <input type="email" placeholder="Email"id="uid" required><br><br>
+                                <input type="email" placeholder="Email"id="uid" autocomplete="off" required><br><br>
                                 <input type="password"
                                         placeholder="Password"
                                          id="u_psw" 
                                         name="u_psw" 
+                                        autocomplete="off"
                                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required><br><br>
                                 <input id="login" type="submit" value="LOGIN" >
