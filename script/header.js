@@ -124,6 +124,7 @@ h1.logo-heading {
     font-size: 1.5em;
     /*font-family:;*/
 }
+
 .wishlist, .cart, .search, .account{
     text-decoration: none;
     color: white;
@@ -152,7 +153,7 @@ h1.logo-heading {
               <div class="logo"><h1 class="logo-heading"><a class="logo-link" href="../index.html">FASHION WORLD</a></h1></div>
               <div class="header-section-right">
               <h5 class="wish"></h5>
-                  <a class="account" href="../html/login.html" >A</a>
+                  <a class="account" href="../html/login.html" >&#128100;</a>
                   
                   <a class="cart" href="../html/cart.html" >C</a>
               </div>

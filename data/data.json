@@ -37,24 +37,10 @@
     },
     {
       "u_name": "aditi",
-      "u_ln": "",
-      "uid": "",
-      "u_psw": "",
-      "id": 6
-    },
-    {
-      "u_name": "aditi",
       "u_ln": "dhiman",
       "uid": "dhiman@gmail.com",
       "u_psw": "sharma@17",
       "id": 7
-    },
-    {
-      "u_name": "c",
-      "u_ln": "vg",
-      "uid": "bvjhgj",
-      "u_psw": "bvhj",
-      "id": 8
     }
   ],
   "products": [
@@ -159,7 +145,7 @@
   ],
   "products3": [
     {
-      "id": 1,
+      "id": 13,
       "p_id": 113,
       "p_name": "Denim_one",
       "p_cost": 1000,
@@ -167,7 +153,7 @@
       "pic": "../media/denim1.png"
     },
     {
-      "id": 2,
+      "id": 14,
       "p_id": 114,
       "p_name": "Denim_two",
       "p_cost": 2000,
@@ -175,7 +161,7 @@
       "pic": "../media/denim2.png"
     },
     {
-      "id": 3,
+      "id": 15,
       "p_id": 115,
       "p_name": "Denim_three",
       "p_cost": 3000,
@@ -183,7 +169,7 @@
       "pic": "../media/denim3.png"
     },
     {
-      "id": 4,
+      "id": 16,
       "p_id": 116,
       "p_name": "Denim_four",
       "p_cost": 4000,
@@ -191,7 +177,7 @@
       "pic": "../media/denim4.png"
     },
     {
-      "id": 5,
+      "id": 17,
       "p_id": 117,
       "p_name": "Denim_five",
       "p_cost": 600,
@@ -199,7 +185,7 @@
       "pic": "../media/denim5.png"
     },
     {
-      "id": 6,
+      "id": 18,
       "p_id": 118,
       "p_name": "Denim_six",
       "p_cost": 500,
@@ -208,54 +194,41 @@
     }
   ],
   "cart": [
+    
     {
       "uid": "shikharana4@gmail.com",
-      "p_id": "113",
+      "p_id": "104",
       "qty": "1",
-      "byed": "0",
-      "id": 1
-    },
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "110",
-      "qty": "1",
-      "byed": "0",
-      "id": 3
-    },
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "107",
-      "qty": "2",
       "byed": "0",
       "id": 4
     },
     {
       "uid": "shikharana4@gmail.com",
-      "p_id": "112",
-      "qty": "2",
+      "p_id": "103",
+      "qty": "1",
+      "byed": "0",
+      "id": 5
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "102",
+      "qty": "1",
       "byed": "0",
       "id": 6
     },
     {
       "uid": "shikharana4@gmail.com",
-      "p_id": "111",
+      "p_id": "101",
+      "qty": "1",
+      "byed": "0",
+      "id": 7
+    },
+    {
+      "uid": "shikharana4@gmail.com",
+      "p_id": "106",
       "qty": "1",
       "byed": "0",
       "id": 8
-    },
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "108",
-      "qty": "1",
-      "byed": "0",
-      "id": 10
-    },
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "109",
-      "qty": "1",
-      "byed": "0",
-      "id": 12
     }
   ]
 }

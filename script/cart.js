@@ -1,11 +1,15 @@
 /* All functions to be called at loding time are at bottom */
 gdata = ''              //Global products data
-cartdata = ''           //Cart data 
+gdata2=''
+gdata3=''
+cartData2=''           //Cart data 
+cartData3=''
+cartData = ''           //Cart data 
 let url = window.localStorage.getItem("url")
 let user = window.sessionStorage.getItem('user')
 function LOAD() {
     console.log(user)
-    if (user != null) {
+    if (user != '') {
         document.getElementById('wish').innerHTML = "Welcome " + user +" this is your cart"
         //Get all products
 
@@ -19,6 +23,35 @@ function LOAD() {
                 console.log(errRes)
             }
         })
+        //for products 2
+        $.ajax({
+            url: url + "/products2",
+            type: "GET",
+            success: (posRes) => {
+                gdata2 = posRes
+            },
+            error: (errRes) => {
+                console.log(errRes)
+            }
+        })
+
+        ///for products 3
+        $.ajax({
+            url: url + "/products3",
+            type: "GET",
+            success: (posRes) => {
+                gdata3 = posRes
+            },
+            error: (errRes) => {
+                console.log(errRes)
+            }
+        })
+        
+       
+
+
+
+       
     }
     else
         document.getElementById('wish').innerHTML = "Please login to Add to Cart"
@@ -27,6 +60,7 @@ function LOAD() {
 function cart(id)
 {
     addToCart(id)
+    //addToCart(id2)
     showCart()
     window.open("../html/cart.html",'_parent')
 }
@@ -34,6 +68,7 @@ function cart(id)
 function buyNow(id)
 {
     addToCart(id)
+    
     window.open("./buynow.html",'_parent')
 }
 
@@ -41,9 +76,11 @@ function addToCart(id)
 {
     console.log("Product id:- ",id)
     let cqty = 0
-    let cartData = []
-    let ix = ''
+    let cartData = [] 
+    let ix=''
     let cartid = ''
+   
+
     $.ajax({
         url: url + "/cart" + "?q=" + user,  //get all products from cart for loggedin user
         type: "GET",
@@ -102,6 +139,10 @@ function addToCart(id)
                     }
                 })
             }
+
+
+           
+
             showCart()
             
         },
@@ -109,9 +150,91 @@ function addToCart(id)
             console.log(errRes)
            
         }
-    })        
+    })   
+    
+    
+  
+   
+    
+     
+
 }
 
+/*function addToCart(id2)
+{
+    console.log("Product id:",id2)
+    let cqty2=0
+    let cartData2=[]
+    let ix2=''
+    let cartid2=''
+    $.ajax({
+      url: url + "/cart" + "?q=" + user,  //get all products from cart for loggedin user
+      type: "GET",
+      success: (posRes) => {
+          cartData2 = posRes
+          for(let i = 0; i < cartData2.length; i++)
+          {                
+              if(cartData2[i].p_id == gdata2[id2].p_id && cartData2[i].byed == 0)
+              {                                 
+                  console.log("Comparison success qty = ",cartData2[i].qty)      
+                  cqty2 = 1
+                  ix2 = i
+                  cartid2 = cartData2[i].id2                                                          
+              }                
+          }
+          if(cqty2 == 1)   //if quanity is 1 product is present, update qty only otherwise make entry in cart
+          {
+              console.log("Present")
+              let data2 = {}
+              data2.uid = user
+              data2.p_id = gdata2[id2].p_id        
+              data2.qty = parseInt(cartData2[ix2].qty) + 1
+              data2.byed = 0
+              $.ajax({            
+                  url : url+"/cart/"+cartid2,
+                  type : "PUT",
+                  data : data2,
+                  success : (posRes) =>{
+                      console.log(posRes)
+                  },
+                  error : (errRes) =>{
+                      console.log(errRes)
+                  }
+              })
+          }
+          else    
+          {
+              console.log("Absent")
+              let data2 = {}
+              data2.uid = user
+              data2.p_id = gdata2[id2].p_id        
+              data2.qty = 1
+              data2.byed = 0                    
+              $.ajax({
+                  url : url+"/cart",
+                  type : "POST",
+                  data : data2,
+                  success : (posRes) =>{
+                      console.log(posRes)
+                  },
+                  error : (errRes) =>{
+                      console.log(errRes)
+                  }
+              })
+          }
+  
+  
+     
+         // showCart()
+          
+          
+      },
+      error:(errRes)=>{
+          console.log(errRes)
+      }
+  })
+}
+*/
 function showCart() {
     
     $.ajax({
@@ -152,8 +275,60 @@ function showCart() {
             console.log(errRes)
         }
     })
-}
 
+   
+ 
+   
+  
+}
+/*
+function showCart() {
+    
+    $.ajax({
+        url: url + "/cart" + "?q=" + user,
+        type: "GET",
+        success: (posRes) => {
+            let cartData2 = posRes
+            console.log("Cart data:- ",cartData2)
+            let x = '<div class="row">'
+            for (let i = 0; i < cartData2.length; i++) {     //iterate cart data
+                if (cartData2[i].byed == 0) {    //check for product already purchased or not
+                    for (let j = 0; j < gdata2.length; j++) {    //iterate products data
+                        if (gdata2[j].p_id == cartData2[i].p_id) {   //map cart and products with p_id
+                            let obj2 = gdata2[j]
+                            x = x + `
+                                <div class = ' col-4 my-3'>
+                                    <div class = 'col card '>
+                                    
+                                        <img src = ${obj2.pic} class = 'card-img-top'>
+                                        <div class = 'card-body'>
+                                            <div class = "h2 card-title">${obj2.p_name} </div>  
+                                            <div class = "h4 text-muted">${cartData2[i].qty}</div>                              
+                                            <button onclick="reduceFromCart(${cartData2[i].id},${cartData2[i].qty},${cartData2[i].p_id})" class="btn btn-outline-success btn-block btn-sm">Reduce</button>
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                `
+                        }
+                    }
+                }
+            }
+            x = x + `</div>`
+            document.getElementById('cart').innerHTML = x
+           
+        },
+        error: (errRes) => {
+            console.log(errRes)
+        }
+    })
+
+   
+ 
+   
+  
+}
+*/
 function reduceFromCart(id, qty, p_id) {    
     if(qty == 1)
     {
