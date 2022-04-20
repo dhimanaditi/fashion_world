@@ -190,26 +190,6 @@
     }
   ],
   "cart": [
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "101",
-      "qty": "1",
-      "byed": "0",
-      "id": 1
-    },
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "114",
-      "qty": "1",
-      "byed": "0",
-      "id": 2
-    },
-    {
-      "uid": "shikharana4@gmail.com",
-      "p_id": "107",
-      "qty": "1",
-      "byed": "0",
-      "id": 3
-    }
+   
   ]
 }

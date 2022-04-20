@@ -1,10 +1,8 @@
 /* All functions to be called at loding time are at bottom */
 gdata = ''              //Global products data
-gdata2=''
-gdata3=''
+
 cartData = ''           //Cart data 
-cartData2=''
-cartData3=''
+
 let url = window.localStorage.getItem("url")
 let user = window.sessionStorage.getItem('user')
 function LOAD() {
@@ -26,7 +24,8 @@ function LOAD() {
                             <div class = 'card-body'>
                                 <div class = "h2 card-title">${gdata[i].p_name} </div>
                                 <div class = "h4 card-subtitle text-muted">${gdata[i].p_cost} </div>
-                                <button onclick="learnMore('${i}')" class="btn btn-outline-info btn-block btn-sm">Learn More</button>
+                                <button onclick="learnMore('${i}')" class="btn btn-outline-info btn-block btn-sm"  data-toggle = 'modal'
+                                data-target = "#my_division" >Learn More</button>
                                 <button onclick="addToCart('${i}')" class="btn btn-outline-success btn-block btn-sm">Add to Cart</button>
                                 <button onclick="buyNow('${i}')" class="btn btn-outline-success btn-block btn-sm">Buy Now</button>
                             </div> 
@@ -58,7 +57,8 @@ function LOAD() {
                             <div class = 'card-body'>
                                 <div class = "h2 card-title">${gdata[i].p_name} </div>
                                 <div class = "h4 card-subtitle text-muted">${gdata[i].p_cost} </div>
-                                <button onclick="learnMore('${i}')" class="btn btn-outline-info btn-block btn-sm">Learn More</button>
+                                <button onclick="learnMore('${i}')" class="btn btn-outline-info btn-block btn-sm" data-toggle = 'modal'
+                                data-target = "#my_division">Learn More</button>
                                 <button onclick="addToCart('${i}')" class="btn btn-outline-success btn-block btn-sm">Add to Cart</button>
                                 <button onclick="buyNow('${i}')" class="btn btn-outline-success btn-block btn-sm">Buy Now</button>
                             </div> 
@@ -90,7 +90,8 @@ function LOAD() {
                             <div class = 'card-body'>
                                 <div class = "h2 card-title">${gdata[i].p_name} </div>
                                 <div class = "h4 card-subtitle text-muted">${gdata[i].p_cost} </div>
-                                <button onclick="learnMore('${i}')" class="btn btn-outline-info btn-block btn-sm">Learn More</button>
+                                <button onclick="learnMore('${i}')" class="btn btn-outline-info btn-block btn-sm" data-toggle = 'modal'
+                                data-target = "#my_division">Learn More</button>
                                 <button onclick="addToCart('${i}')" class="btn btn-outline-success btn-block btn-sm">Add to Cart</button>
                                 <button onclick="buyNow('${i}')" class="btn btn-outline-success btn-block btn-sm">Buy Now</button>
                             </div> 
@@ -120,7 +121,20 @@ function LOAD() {
 function learnMore(id) {
 
     console.log(id)
-    alert(gdata[id].p_desc)
+    //alert(gdata[id].p_desc)
+    
+    let x=`<div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                 <div class="modal-header">
+                        <h1 class="modal-title">${gdata[id].p_name} </h1> 
+                        <button class="close" data-dismiss = 'modal'>&times;</button>
+                    </div>
+                    <div class="modal-body"><h2>${gdata[id].p_desc}</h2></div>
+    </div>
+    </div>`
+    document.getElementById("my_division").innerHTML=x
+   
+     
    
 }
 
@@ -215,86 +229,9 @@ function addToCart(id)
    
 }
 
-/*
-function addToCart(id3)
-{
-    console.log("Product id:",id3)
-    let cqty3=0
-    let cartData3=[]
-    let ix3=''
-    let cartid3=''
-    $.ajax({
-      url: url + "/cart" + "?q=" + user,  //get all products from cart for loggedin user
-      type: "GET",
-      success: (posRes) => {
-          cartData3 = posRes
-          for(let i = 0; i < cartData3.length; i++)
-          {                
-              if(cartData3[i].p_id == gdata3[id3].p_id && cartData3[i].byed == 0)
-              {                                 
-                  console.log("Comparison success qty = ",cartData3[i].qty)      
-                  cqty3 = 1
-                  ix3 = i
-                  cartid3 = cartData3[i].id3                                                          
-              }                
-          }
-          if(cqty3 == 1)   //if quanity is 1 product is present, update qty only otherwise make entry in cart
-          {
-              console.log("Present")
-              let data3 = {}
-              data3.uid = user
-              data3.p_id = gdata3[id3].p_id        
-              data3.qty = parseInt(cartData3[ix3].qty) + 1
-              data3.byed = 0
-              $.ajax({            
-                  url : url+"/cart/"+cartid3,
-                  type : "PUT",
-                  data : data3,
-                  success : (posRes) =>{
-                      console.log(posRes)
-                  },
-                  error : (errRes) =>{
-                      console.log(errRes)
-                  }
-              })
-          }
-          else    
-          {
-              console.log("Absent")
-              let data3 = {}
-              data3.uid = user
-              data3.p_id = gdata3[id3].p_id        
-              data3.qty = 1
-              data3.byed = 0                    
-              $.ajax({
-                  url : url+"/cart",
-                  type : "POST",
-                  data : data3,
-                  success : (posRes) =>{
-                      console.log(posRes)
-                  },
-                  error : (errRes) =>{
-                      console.log(errRes)
-                  }
-              })
-          }
-  
-  
-     
-         // showCart()
-          
-          
-      },
-      error:(errRes)=>{
-          console.log(errRes)
-      }
-  })
-}
-*/
-
 
 function showCart() {
-    if (user != '') { 
+    if (user != null) { 
          document.getElementById('wish').innerHTML = "Welcome "+ user
     $.ajax({
         url: url + "/cart" + "?q=" + user,
@@ -346,7 +283,7 @@ function showCart() {
   
    }
     else{
-        document.getElementById('wish').innerHTML = "Unauthorized user " 
+        document.getElementById('wish').innerHTML = "Welcome Guest " 
         
 
     }

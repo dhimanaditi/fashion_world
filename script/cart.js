@@ -9,7 +9,7 @@ let url = window.localStorage.getItem("url")
 let user = window.sessionStorage.getItem('user')
 function LOAD() {
     console.log(user)
-    if (user != '') {
+    if (user != null) {
         document.getElementById('wish').innerHTML = "Welcome " + user +" this is your cart"
         //Get all products
 
@@ -152,15 +152,6 @@ function addToCart(id)
         }
     })   
     
-    
-  
-   
-    
-     
-
-
-
-
     
    
 }
